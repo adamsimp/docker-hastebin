@@ -2,4 +2,12 @@ web:
   build: .
   ports:
     - "8081:7777"
-
+  links:
+    - redis
+  volumes:
+    - /path/to/config.js:/opt/haste/config.js
+redis:
+  image: redis:3.0
+  volumes:
+    - /path/to/redis/data/directory:/data
+  command: redis-server --appendonly yes
