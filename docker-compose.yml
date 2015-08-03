@@ -15,3 +15,5 @@ redis:
   command: redis-server --appendonly yes
 nginx:
   image: jwilder/nginx-proxy
+  ports:
+    - "80:80"
