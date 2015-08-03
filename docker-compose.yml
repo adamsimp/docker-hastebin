@@ -1,11 +1,9 @@
-web:
+haste-server:
   build: .
   ports:
     - "7777:7777"
   links:
     - redis
-  volumes:
-    - /path/to/config.js:/opt/haste/config.js
   environment:
     VIRTUAL_HOST: my.domain.tld
 redis:
