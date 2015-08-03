@@ -1,4 +1,4 @@
-haste-server:
+hasteserver:
   build: .
   ports:
     - "7777:7777"
